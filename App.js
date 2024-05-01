@@ -1,20 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Onboarding from './src/Pages/Onboarding';
+import Home from './src/Pages/Home';
+import { useFonts } from 'expo-font';
+import Courses from './src/Pages/Courses';
+import CoursesCategory from './src/Pages/CourseCategory';
+
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    "Jost-regular": require('./assets/fonts/Jost-VariableFont_wght.ttf'),
+    "Jost-medium": require('./assets/fonts/Jost-Medium.ttf'),
+    "Jost-bold": require('./assets/fonts/Jost-Bold.ttf'),
+    "Jost-light": require('./assets/fonts/Jost-Light.ttf'),
+
+})
+if(!fontsLoaded){
+    return undefined
+}
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+       <CoursesCategory/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex:1
+   
+  
+
   },
 });
