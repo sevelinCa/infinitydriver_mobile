@@ -23,9 +23,27 @@ const CoursesCategory = () => {
 
             </View>
             <View style={styles.categories}>
-                <View style={styles.category}>
-                    <Image source={requi}/>
-                </View>
+                <TouchableOpacity style={styles.category}>
+                    <View style={styles.iconContain}>
+                    <Image source={require('../../assets/images/stop.png')} style={{height:40,width:40,objectFit:"contain"}}/>
+
+                    </View>
+                    <Text style={{fontSize:16,fontFamily:'Jost-medium'}}>Ibyapa Bibuza</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.category}>
+                    <View style={styles.iconContain}>
+                    <Image source={require('../../assets/images/warn.png')} style={{height:40,width:40,objectFit:"contain"}}/>
+
+                    </View>
+                    <Text style={{fontSize:16,fontFamily:'Jost-medium'}}>Ibyapa Bibuza</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.category}>
+                    <View style={styles.iconContain}>
+                    <Image source={require('../../assets/images/stop.png')} style={{height:40,width:40,objectFit:"contain"}}/>
+
+                    </View>
+                    <Text style={{fontSize:16,fontFamily:'Jost-medium'}}>Ibyapa Bibuza</Text>
+                </TouchableOpacity>
             </View>
 
         </View>
@@ -36,7 +54,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
 
-        paddingTop: 20
+        paddingTop: 20,
+        
     },
     header: {
         display: 'flex',
@@ -57,13 +76,13 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection:'column',
         gap: 10,
-        padding: 40,
+        padding: 20,
         backgroundColor: 'white',
         flex: 1,
 
     },
     category:{
-        padding:20,
+        padding:10,
         borderWidth:1,
         borderStyle:'solid',
         borderColor: '#EEEEEE',
@@ -71,7 +90,14 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         alignItems:'center',
         gap:10,
-        backgroundColor:'#FFECCC'
+        backgroundColor:'#FFFAF2',
+        borderRadius:12
+    },
+    iconContain:{
+        padding:10,
+        paddingHorizontal:20,
+        backgroundColor: '#FFECCC',
+        borderRadius:12
     }
 
 
