@@ -5,6 +5,8 @@ import Home from './src/Pages/Home';
 import { useFonts } from 'expo-font';
 import Courses from './src/Pages/Courses';
 import CoursesCategory from './src/Pages/CourseCategory';
+import {NavigationContainer} from "@react-navigation/native"
+import Navigation from './src/Navigation';
 
 
 export default function App() {
@@ -20,7 +22,12 @@ if(!fontsLoaded){
 }
   return (
     <View style={styles.container}>
-       <CoursesCategory/>
+      <NavigationContainer>
+
+
+       <Navigation/>
+      </NavigationContainer>
+  
     </View>
   );
 }

@@ -2,26 +2,24 @@ import { View, Text, StyleSheet, TouchableOpacity, ImageBackground,Image } from 
 import React from 'react'
 
 
-const LatestLeason = () => {
+const LatestLeason = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.head}>
                 <Text style={styles.textHead}>Amasomo aheruka</Text>
                 <TouchableOpacity style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={styles.textLink}>Ayandi</Text>
+                    <Text style={styles.textLink}>Reba Yose</Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.leasons}>
-                <TouchableOpacity style={styles.leason}>
+                <TouchableOpacity onPress={()=> navigation.navigate('Category')} style={styles.leason}>
                     <View style={styles.imageCover}>
                     <Image
                         source={require('../../assets/images/icyapa1.png')} 
                         style={styles.imageBackground} 
                         />
-
-                
                         </View>
-                    <View>
+                    <View style={styles.content}>
                         <Text style={{ fontSize: 20, fontWeight: "600",fontFamily: "Jost-medium"  }}>Ibyapa</Text>
                         <Text style={{ fontSize: 14, fontWeight: "400",fontFamily: "Jost-regular" }}>Ibyapa bitegeka bitegeka/ngoboka</Text>
                     </View>
@@ -35,7 +33,7 @@ const LatestLeason = () => {
 
                 
                         </View>
-                    <View>
+                    <View style={styles.content}>
                         <Text style={{ fontSize: 20, fontWeight: "600",fontFamily: "Jost-medium"  }}>Igazeti</Text>
                         <Text style={{ fontSize: 14, fontWeight: "400",fontFamily: "Jost-regular" }}>Ibyapa bitegeka bitegeka/ngoboka</Text>
                     </View>
@@ -48,10 +46,15 @@ const LatestLeason = () => {
 const styles = StyleSheet.create({
     container: {
         paddingHorizontal: 20,
-        paddingTop: 40,
+        paddingTop: 10,
         display: 'flex',
         flexDirection: "column",
         gap: 10
+    },
+    content:{
+        padding:10,
+    
+
     },
     head: {
         display: 'flex',
@@ -59,14 +62,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignContent: 'center',
         justifyContent: 'space-between',
-        width: '100%'
+        width: '100%',
+
     },
     textHead: {
-        fontSize: 20,
-        fontWeight: '500',
-        fontFamily: "Jost-medium" 
+        fontSize:18,
+       fontFamily:'Jost-regular'
     },
     textLink: {
+        fontSize: 16,
         color: '#F7B733',
         fontFamily: "Jost-medium" 
     },
@@ -78,21 +82,15 @@ const styles = StyleSheet.create({
     },
     leason: {
         width: "50%",
-     
-        padding: 10,
-        paddingTop: 8,
         display: 'flex',
         flexDirection: 'column',
         gap: 10,
-        borderRadius: 12,
-        backgroundColor:'#FFFAF2'
+        backgroundColor:'#FFF4E0'
     },
     imageBackground: {
         width:'100%',
         height: 130,  
         top: 0,
-        borderRadius:8,
-        
     },
     imageCover:{
         width:'100%',

@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const Onboarding = () => {
+const Onboarding = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.onboardImg}>
@@ -19,7 +19,7 @@ const Onboarding = () => {
                         <Text style={styles.bigText}>A DRIVE APP</Text>
                     </View>
                     <Text style={styles.text}>Welcome to the ultimate driving theory test preparation app. Let's get you ready for success!"</Text>
-                    <TouchableOpacity style={styles.button}><Text style={{ color: 'white' }}>Get Started</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={()=>navigation.navigate('Home')} style={styles.button}><Text style={{ color: 'white' }}>Get Started</Text></TouchableOpacity>
                 </View>
 
             </View>
