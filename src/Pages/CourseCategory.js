@@ -23,7 +23,7 @@ const CoursesCategory = ({navigation}) => {
 
             </View>
             <View style={styles.categories}>
-                <TouchableOpacity style={styles.category}>
+                <TouchableOpacity onPress={()=> navigation.navigate('instruction')} style={styles.category}>
                     <View style={styles.iconContain}>
                     <Image source={require('../../assets/images/stop.png')} style={{height:40,width:40,objectFit:"contain"}}/>
 

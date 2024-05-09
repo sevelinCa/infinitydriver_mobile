@@ -8,6 +8,7 @@ import { RectButton } from 'react-native-gesture-handler';
 import { Svg, Path, G } from 'react-native-svg';
 import { View } from 'react-native';
 import { Text } from 'react-native';
+import Instructions from './Pages/Instructions';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator()
@@ -134,9 +135,8 @@ function Navigation() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Onboard" component={Onboarding} />
       <Stack.Screen name="Home" component={MaterialNavigation} />
-
       <Stack.Screen name="Category" component={CoursesCategory} />
-
+      <Stack.Screen name="instruction" component={Instructions} />
     </Stack.Navigator>
   );
 }
